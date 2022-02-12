@@ -3,12 +3,10 @@
 
 
 int main(){
+    int num ;
     printf("Is odd or even?\n");
-    int num = scanf("Type a number:\n");
-    int reminder = num % 2;
-    int sum = reminder + num;
-    printf(int(sum));
-    if( reminder == 0){
+     scanf("%d", &num);
+    if( num % 2 == 0){
         printf("The number is even");
     }
     else{
