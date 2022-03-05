@@ -33,7 +33,7 @@ int main(int argc, char* argv []){
     printf("a: %d b: %d", a, b);
     modifyVariables(a,b);
     printf("a; %d b: %d", a, b);
-    printf("a: %d b: %d", a, b);
+    printf(";;;;;;;;a: %d b: %d", a, b);
     modifyVariablesAdress(&a, &b);
     printf("a: %d b: %d", a, b);
 
