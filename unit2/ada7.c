@@ -1,40 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 //variables
-int *count = 0;
-int i, j = 0;
-int e = 2;
-void primeOrNot(int num, int* count);
+int x = 0;
+int* p = &x;
+int num = 0;
 
-int main(int argc, char* argv[]){
-    //i = atoi(argv[1]);
-    printf("Type your number:\n");
-    scanf("%d", &i);
-    if (i == 0 || 1){
-        printf("The number %i is not prime\n", i);
-    }
-    if  (i == 2){
-        printf("The number 2 is prime\n");
-    }
-    else{
-        primeOrNot(i, &count);
-    }
-    
-    
-}
 
-void primeOrNot(int num, int*count){
-    for (j = 3; j<= num; j ++){
-        if ( num % j == 0){
-        *count ++;
+// modify variable's values with pointers
+
+void modifyVariable(int* pointer){
+    for (int i = 1; i <= num; i++){
+        if ( num % i ==0){
+            *p = x + 1;
         }
     }
-    if (*count == e){
-        printf("The number %i is prime\n", num);
+    return;
+}
+
+int main(){
+    printf("Type your number: \n");
+    scanf("%d", &num);
+    //call the modifyVariable funciton
+    modifyVariable(p);
+    if (x == 2){
+        printf("The number %d is prime\n", num);
     }
     else {
         printf("The number %d is not prime\n", num);
     }
-    return;
+
 }
+
+
+//same algorithm but wih argv
+    /*int main(int argc, char* argv[]){
+        num = atoi(argv[1]);
+        //call the modifyVariable funciton
+        modifyVariable(p);
+        if (x == 2){
+            printf("The number %d is prime\n", num);
+        }
+        else {
+            printf("The number %d is not prime\n", num);
+        }
+
+    }
+    */
