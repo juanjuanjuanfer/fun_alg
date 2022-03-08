@@ -5,7 +5,7 @@
 //variables
 int x = 0;
 int* p = &x;
-int num = 0;
+int num ;
 
 
 // modify variable's values with pointers
