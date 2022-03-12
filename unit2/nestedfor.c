@@ -1,18 +1,15 @@
 #include <stdio.h>
-#include "../libraries/utils.h"
 #include <stdlib.h>
 
-int main(int argc, char** argv){
+char * myName = "Héctor González"; 
 
-	if(argc !=2)
 
-	for(int i = 0; i<= atoi(argv[1]); i= i + 1){
-		printf("i: %d\n", i );
-		sleep(1000);
-		for(int j = 2; j<atoi(argv[2]); j++){
-			printf("\tj: %d\n", j);
-			sleep(1000);
-		}
-	};
-	return 0;
+int main (int argc, char ** argv){
+    printf("Welcome to program %s\n", argv[0]);
+    int num1 = atoi(argv[1]);
+    int num2 = atoi(argv[2]);
+    int sum = num1 + num2;
+    printf("The sum is equal to %d\n", sum);
+
+    return 0;
 }

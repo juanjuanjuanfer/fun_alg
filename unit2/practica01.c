@@ -9,10 +9,10 @@ int weightb = 0;
 int alternatingSums(){
     for (int i = 0; i < lenght ; i ++ ){
         if (i == 0 || i ==  2 ||i ==  4){
-            weighta = weighta + a[i];
+            weighta += a[i];
         }
         else if( i  == 1 || i == 3){
-            weightb = weightb + a[i];
+            weightb += a[i];
         }
     }
     printf("[");
